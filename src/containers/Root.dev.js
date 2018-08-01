@@ -6,15 +6,16 @@ import { Route } from 'react-router-dom'
 import App from './App'
 import UserPage from './UserPage'
 import RepoPage from './RepoPage'
-import LoginPage from './login/LoginPage'
-import TopBar from '../components/TopBar'
+import LoginPage from './login/LoginPage';
+import RegisterPage from './register/RegisterPage';
 
 const Root = ({ store }) => (
   <Provider store={store}>
     <div>
-      <TopBar/>
-      <Route path="/login" component={App} />
-      <Route path="/" component={LoginPage} />
+     
+      <Route path="/" component={App} />
+      <Route path="/login" component={LoginPage} />
+      <Route path="/register" component={RegisterPage} />
       <DevTools />
     </div>
   </Provider>

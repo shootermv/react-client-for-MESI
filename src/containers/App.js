@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 import Explore from '../components/Explore'
+import TopBar from '../components/TopBar'
 import { resetErrorMessage } from '../actions'
 
 class App extends Component {
@@ -47,9 +48,10 @@ class App extends Component {
     const { children, inputValue } = this.props
     return (
       <div>
-        <Explore value={inputValue}
-                 onChange={this.handleChange} />
-        <hr />
+      {/*}  <Explore value={inputValue}
+    onChange={this.handleChange} />*/}
+    <TopBar/>
+    
         {this.renderErrorMessage()}
         {children}
       </div>
