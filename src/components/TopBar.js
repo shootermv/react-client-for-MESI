@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from "react-router-dom";
 import './topbar.css'
 
 const TopBar = () => {
@@ -15,10 +16,12 @@ const TopBar = () => {
             </div>
             <div className="navbar-collapse collapse">
               <ul className="nav navbar-nav">
-                  <li className="active">
-                    <a className="top-a" href="/login">Log in</a>
-                  </li>
-                  <li><a className="top-a" href="/register">Register</a></li>
+                <li activeClassName="active">
+                  <NavLink to="/login" className="top-a">Log in</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/register" className="top-a">Register</NavLink>
+                </li>
               </ul>
             </div>
         </div>
