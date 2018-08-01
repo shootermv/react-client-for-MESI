@@ -5,7 +5,7 @@
   border-width: 0 0 1px;
 }
 @media (min-width: 768px) {
-ul.navbar-nav > li > a {
+ul.navbar-nav > li > a.top-a {
     padding-top: 15px;
     padding-bottom: 15px;
 }

@@ -3,7 +3,7 @@ import './topbar.css'
 
 const TopBar = () => {
   return (
-      <div className="navbar navbar-default navbar-fixed-top">
+      <div className="navbar navbar-default navbar-fixed-top lplp">
         <div className="container">
             <div className="navbar-header">
               <a href="../" className="navbar-brand">Mesi</a>
@@ -16,9 +16,9 @@ const TopBar = () => {
             <div className="navbar-collapse collapse">
               <ul className="nav navbar-nav">
                   <li className="active">
-                    <a href="/login">Log in</a>
+                    <a className="top-a" href="/login">Log in</a>
                   </li>
-                  <li><a href="/register">Register</a></li>
+                  <li><a className="top-a" href="/register">Register</a></li>
               </ul>
             </div>
         </div>
