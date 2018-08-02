@@ -18,6 +18,9 @@
 }
 .checkbox input{
 	position:relative;
-	top:-4px;
-	right:15px;
+	right:5px;
+}
+.radio input{
+	position:relative;
+	right:5px;
 }

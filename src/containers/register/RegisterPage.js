@@ -19,10 +19,10 @@ const RegisterPage = () => {
                     </div>
                 </div>
 
-                <label for="rememberme" className="checkbox">
+                <label for="rememberme" className="radio">
                     <input type="radio"  name="level"/>Administrator
                 </label>
-                <label for="rememberme" className="checkbox">
+                <label for="rememberme" className="radio">
                     <input type="radio" name="level"/>Normal User
                 </label>
 
