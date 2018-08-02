@@ -32,24 +32,21 @@ class LoginPage extends Component {
 
     fetch('http://localhost:8000/login', {
         method: "POST",
-        mode: "cors",
-        cache: "no-cache",
-        credentials: "same-origin",
         headers: {
             "Content-Type": "application/json; charset=utf-8"
         },
-        redirect: "follow", // manual, *follow, error
-        referrer: "no-referrer", // no-referrer, *client
         body: JSON.stringify( data ) // body data type must match "Content-Type" header
     })
     .then(response => {
-      response.json();
+      return response.json();
+    })
+    .then(response => {
+      console.log(response)
       this.setState({
         username: '',
         password: ''
       });
-      
-    }) // parses response to JSON
+    })
     .catch(error => console.error(`Fetch Error =\n`, error));
   }
 
