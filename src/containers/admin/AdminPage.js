@@ -5,6 +5,7 @@ class AdminPage extends Component {
     }
     getData() {    
         fetch('http://localhost:8000/users', {
+            credentials: 'include',
             headers: {
                 "Content-Type": "application/json; charset=utf-8"
             }

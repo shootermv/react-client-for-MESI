@@ -32,6 +32,7 @@ class LoginPage extends Component {
 
     fetch('http://localhost:8000/login', {
         method: "POST",
+        credentials: 'include',
         headers: {
             "Content-Type": "application/json; charset=utf-8"
         },
@@ -41,7 +42,8 @@ class LoginPage extends Component {
       return response.json();
     })
     .then(response => {
-      console.log(response)
+      console.log(response);
+      document.cookie = `user=${response}`
       this.setState({
         username: '',
         password: ''
