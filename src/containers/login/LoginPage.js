@@ -46,6 +46,7 @@ class LoginPage extends Component {
         username: '',
         password: ''
       });
+      this.props.history.push('/admin');
     })
     .catch(error => console.error(`Fetch Error =\n`, error));
   }
@@ -77,7 +78,6 @@ class LoginPage extends Component {
                     <button className="btn btn-large btn-primary" onClick={this.send}>Log in</button>
                   </div>
               </div>
-
             </form>
       </div>
 
