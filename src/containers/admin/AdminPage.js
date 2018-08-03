@@ -1,8 +1,31 @@
-import React from 'react'
+import React,{Component} from 'react'
+class AdminPage extends Component {
+    constructor(props) {
+      super(props);
+    }
+    getData() {    
+        fetch('http://localhost:8000/users', {
+            headers: {
+                "Content-Type": "application/json; charset=utf-8"
+            }
+        })
+        .then(response => {
+          return response.json();
+        })
+        .then(response => {
+          console.log(response)
 
-const AdminPage = () => {
-    return (
-        <div>this is Admin page!</div>
-    )
+        })
+        .catch(error => console.error(`Fetch Error =\n`, error));
+      }
+        
+    componentDidMount( ) {
+      this.getData();
+    }
+    render() {
+        return (
+            <div className="container">this is Admin page!</div>
+        )
+    }
 }
 export default AdminPage;
