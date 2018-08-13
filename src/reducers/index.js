@@ -12,6 +12,11 @@ const entities = (state = { users: {}, repos: {} }, action) => {
   return state
 }
 
+const auth = (state = { isLoggedin:false }, action) =>{
+
+  return state
+}
+
 // Updates error message to notify about the failed fetches.
 const errorMessage = (state = null, action) => {
   const { type, error } = action
