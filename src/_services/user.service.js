@@ -18,15 +18,16 @@ function login(username, password) {
         body: JSON.stringify({ username, password })
     };
 
-    return fetch(`${config.apiUrl}/users/authenticate`, requestOptions)
+    return fetch(`${process.env.REACT_APP_API_HOST}/login`, requestOptions)
         .then(handleResponse)
         .then(user => {
             // login successful if there's a jwt token in the response
-            if (user.token) {
+           /* if (user.token) {
                 // store user details and jwt token in local storage to keep user logged in between page refreshes
                 localStorage.setItem('user', JSON.stringify(user));
-            }
-
+            }*/
+            localStorage.setItem('user', JSON.stringify(user));
+            document.cookie = `user=${user}`
             return user;
         });
 }
