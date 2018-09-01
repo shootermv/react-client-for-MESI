@@ -39,11 +39,13 @@ function logout() {
 
 function getAll() {
     const requestOptions = {
-        method: 'GET',
-        headers: authHeader()
+        credentials: 'include',
+        headers: {
+            "Content-Type": "application/json; charset=utf-8"
+        }
     };
 
-    return fetch(`${config.apiUrl}/users`, requestOptions).then(handleResponse);
+    return fetch(`${process.env.REACT_APP_API_HOST}/users`, requestOptions).then(handleResponse);
 }
 
 function getById(id) {
